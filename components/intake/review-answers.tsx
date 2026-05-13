@@ -34,6 +34,7 @@ const labels: Record<keyof IntakeAnswers, string> = {
   currentCoverage: "Current coverage",
   exploringReasons: "Why exploring",
   timeline: "Timeline",
+  internalNotes: "Broker/internal notes",
 };
 
 export function ReviewAnswers({

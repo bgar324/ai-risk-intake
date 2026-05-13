@@ -57,3 +57,34 @@ body {
 .metric-label {
   @apply text-[11px] font-medium uppercase tracking-normal text-muted-foreground;
 }
+
+@media print {
+  @page {
+    margin: 0.55in;
+  }
+
+  body {
+    background: white;
+  }
+
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  .print-surface {
+    background: white !important;
+  }
+
+  .print-surface .container-shell {
+    max-width: none;
+    padding: 0;
+  }
+
+  .print-surface article,
+  .print-surface section,
+  .print-surface pre {
+    break-inside: avoid;
+  }
+}

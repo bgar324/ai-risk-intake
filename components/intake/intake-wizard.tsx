@@ -19,7 +19,7 @@ import { IntakeStepLayout } from "@/components/intake/intake-step-layout";
 import { ProgressSidebar } from "@/components/intake/progress-sidebar";
 import { ReviewAnswers } from "@/components/intake/review-answers";
 import { defaultIntakeValues, intakeSchema, intakeSteps, type IntakeAnswers, type IntakeStepKey } from "@/lib/intake-schema";
-import { loadIntakeAnswers, saveIntakeAnswers } from "@/lib/storage";
+import { loadIntakeAnswers, saveCompletedSubmission, saveIntakeAnswers } from "@/lib/storage";
 import { cn } from "@/lib/utils";
 
 const options = {
@@ -99,7 +99,9 @@ export function IntakeWizard() {
   function goNext() {
     if (!validateStep()) return;
     if (currentStep === intakeSteps.length - 1) {
-      saveIntakeAnswers(getValues());
+      const nextValues = getValues();
+      saveIntakeAnswers(nextValues);
+      saveCompletedSubmission(nextValues);
       router.push("/results");
       return;
     }
@@ -290,6 +292,7 @@ function renderStep(
         <CheckboxField label="Current coverage" field="currentCoverage" values={values.currentCoverage} setValue={setValue} options={options.currentCoverage} error={errors.currentCoverage?.message} />
         <CheckboxField label="Why are you exploring insurance?" field="exploringReasons" values={values.exploringReasons} setValue={setValue} options={options.exploringReasons} error={errors.exploringReasons?.message} />
         <SelectField label="Timeline" field="timeline" value={values.timeline} setValue={setValue} options={options.timeline} error={errors.timeline?.message} />
+        <TextAreaField label="Optional broker/internal notes" field="internalNotes" register={register} error={errors.internalNotes?.message} placeholder="Add context for handoff, contract notes, pending questions, or founder preferences. This stays local in the prototype." />
       </>
     );
   }

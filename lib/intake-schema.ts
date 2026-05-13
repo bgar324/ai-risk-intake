@@ -50,6 +50,7 @@ export const currentInsuranceSchema = z.object({
   currentCoverage: z.array(z.string()).default([]),
   exploringReasons: requiredArray("Select at least one reason for exploring insurance."),
   timeline: requiredString("Choose the closest timeline."),
+  internalNotes: z.string().optional().default(""),
 });
 
 export const intakeSchema = companyProfileSchema
@@ -91,6 +92,7 @@ export const defaultIntakeValues: IntakeAnswers = {
   currentCoverage: [],
   exploringReasons: [],
   timeline: "",
+  internalNotes: "",
 };
 
 export type IntakeStepKey =
@@ -164,7 +166,7 @@ export const intakeSteps: Array<{
     title: "Current insurance status",
     eyebrow: "Step 7",
     description: "Understand what is already in place and why the company is exploring coverage now.",
-    fields: ["currentCoverage", "exploringReasons", "timeline"],
+    fields: ["currentCoverage", "exploringReasons", "timeline", "internalNotes"],
     schema: currentInsuranceSchema,
   },
   {

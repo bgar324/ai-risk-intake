@@ -16,6 +16,9 @@ export function SiteHeader() {
           <Link href="/methodology" className="hover:text-foreground">
             Methodology
           </Link>
+          <Link href="/admin" className="hover:text-foreground">
+            Admin
+          </Link>
           <Link href="/intake" className="hover:text-foreground">
             Demo
           </Link>

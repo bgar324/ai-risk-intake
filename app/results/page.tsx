@@ -8,7 +8,7 @@ import { CoverageAreas } from "@/components/results/coverage-areas";
 import { InternalSummary } from "@/components/results/internal-summary";
 import { QuestionsToPrepare } from "@/components/results/questions-to-prepare";
 import { RiskBreakdown } from "@/components/results/risk-breakdown";
-import { RestartIntakeButton } from "@/components/results/results-actions";
+import { PrintSummaryButton, RestartIntakeButton } from "@/components/results/results-actions";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
@@ -54,7 +54,7 @@ export default function ResultsPage() {
   return (
     <>
       <SiteHeader />
-      <main className="min-h-[calc(100vh-9rem)] product-surface">
+      <main className="min-h-[calc(100vh-9rem)] product-surface print-surface">
         <div className="container-shell py-8">
           {!loaded ? null : !results ? (
             <Card className="mx-auto max-w-2xl bg-white">
@@ -82,7 +82,8 @@ export default function ResultsPage() {
                     Based on your answers, these are the main areas to discuss with an insurance provider.
                   </p>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 no-print">
+                  <PrintSummaryButton className="border-zinc-700 bg-zinc-900 text-white hover:bg-zinc-800" />
                   <Button type="button" variant="outline" className="border-zinc-700 bg-zinc-900 text-white hover:bg-zinc-800" onClick={copyFounderSummary}>
                     <Copy className="h-4 w-4" /> Copy founder summary
                   </Button>
@@ -142,7 +143,7 @@ export default function ResultsPage() {
               </Tabs>
 
               <Separator />
-              <div className="flex flex-col gap-3 sm:flex-row">
+              <div className="flex flex-col gap-3 sm:flex-row no-print">
                 <Button asChild variant="outline">
                   <Link href="/intake">
                     <ArrowLeft className="h-4 w-4" /> Edit answers

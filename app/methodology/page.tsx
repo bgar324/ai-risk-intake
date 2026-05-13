@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { categoryMethodology } from "@/lib/risk-copy";
 
 const items = [
   {
@@ -50,6 +51,32 @@ export default function MethodologyPage() {
               </Accordion>
             </CardContent>
           </Card>
+          <section className="mt-8 max-w-5xl">
+            <div className="border-b pb-4">
+              <p className="metric-label">Score drivers</p>
+              <h2 className="mt-2 text-xl font-semibold tracking-tight">What moves each risk signal</h2>
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-muted-foreground">
+                Each category uses the same 0-100 signal scale. The notes below explain what the prototype looks for and where the scoring stops.
+              </p>
+            </div>
+            <div className="mt-5 grid gap-4 md:grid-cols-2">
+              {Object.entries(categoryMethodology).map(([category, detail]) => (
+                <article key={category} className="rounded-lg border border-zinc-300 bg-white p-5 shadow-none">
+                  <p className="metric-label">{category}</p>
+                  <p className="mt-3 text-sm leading-6 text-zinc-700">{detail.signal}</p>
+                  <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                    {detail.scoreDrivers.map((driver) => (
+                      <li key={driver} className="flex gap-2">
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-zinc-400" />
+                        {driver}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-4 border-t pt-3 text-xs leading-5 text-muted-foreground">{detail.limits}</p>
+                </article>
+              ))}
+            </div>
+          </section>
           <Button asChild className="mt-8">
             <Link href="/intake">
               Start intake <ArrowRight className="h-4 w-4" />

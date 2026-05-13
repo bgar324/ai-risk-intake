@@ -220,6 +220,7 @@ export function generateRiskResults(answers: IntakeAnswers): RiskResults {
         })),
       coverageConversationAreas,
       questionsToAsk,
+      internalNotes: answers.internalNotes?.trim() || undefined,
       disclaimer: "This is not insurance, legal, or financial advice.",
     },
   };

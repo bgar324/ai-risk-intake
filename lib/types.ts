@@ -67,5 +67,6 @@ export type InternalSummary = {
   }>;
   coverageConversationAreas: CoverageArea[];
   questionsToAsk: string[];
+  internalNotes?: string;
   disclaimer: string;
 };

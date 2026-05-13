@@ -46,8 +46,11 @@ At the end, it generates:
 - Deduplicated coverage conversation areas
 - Copy founder summary
 - Copy internal JSON
+- Browser-native PDF export from the results packet
+- Local admin lead list for completed intake handoffs
+- Optional broker/internal notes stored with the handoff summary
 - Empty state when no completed intake exists
-- Methodology page explaining the scoring limits
+- Methodology page explaining category-level score drivers and limits
 - Unit-tested risk scoring rules
 - Responsive product UI for desktop and mobile
 
@@ -148,8 +151,7 @@ AI startups introduce product and data questions that do not fit neatly into a g
 ## Future Improvements
 
 - Persist completed intakes to a backend
-- Add downloadable PDF export
-- Add admin-facing lead list
-- Add richer methodology explanations for each score driver
 - Add analytics events for funnel drop-off analysis
-- Add optional broker/internal notes
+- Add downloadable branded PDF templates with pagination controls
+- Add broker-facing filters and status fields for the local admin list
+- Add deeper methodology examples for edge cases and regulated use cases
