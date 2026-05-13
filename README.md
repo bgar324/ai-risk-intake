@@ -6,6 +6,10 @@ AI Risk Intake is a Corgi-style startup insurance product prototype. It gives fo
 
 The output is not advice. It is a founder-friendly preparation packet plus a structured internal handoff that a startup insurance team could use for lead qualification or routing.
 
+Status: Prototype.
+
+This is an independent product prototype. It is not affiliated with Corgi and does not provide insurance, legal, financial, underwriting, or coverage advice.
+
 ## Problem
 
 AI startup founders often enter insurance conversations with messy context:
@@ -13,9 +17,15 @@ AI startup founders often enter insurance conversations with messy context:
 - The product may rely on third-party LLM APIs, agents, fine-tuned models, or customer-uploaded data.
 - Enterprise customers may ask for limits, certificates, security reviews, or specific policy categories.
 - Founders may not know which details are relevant to an insurer.
-- Internal GTM or underwriting handoff can lose nuance when product risk is described informally.
+- Internal GTM or qualification handoff can lose nuance when product risk is described informally.
 
 This prototype turns that context into a cleaner first conversation.
+
+## Why This Exists
+
+This prototype explores how AI startups could describe complex product and data risks in a structured way before an insurance quote conversation. The goal is to reduce ambiguity for founders and create a cleaner handoff for insurance teams evaluating AI-related risk signals.
+
+AI founders tend to describe risk in product language. Insurance teams need structured signals about data, customers, contracts, model behavior, and operational maturity. AI Risk Intake translates between those two worlds as a product experiment, not as an underwriting system.
 
 ## Solution
 
@@ -109,6 +119,28 @@ npm run test
 npm run build
 ```
 
+## Deploying on Vercel
+
+This project is a standard Next.js App Router application.
+
+1. Push the repository to GitHub.
+2. Import the repository in Vercel.
+3. Use the default Next.js framework settings.
+4. No environment variables are required for the current prototype.
+5. Deploy.
+
+Build command:
+
+```bash
+npm run build
+```
+
+Development command:
+
+```bash
+npm run dev
+```
+
 ## Risk Methodology
 
 The prototype uses deterministic local rules, not an AI model and not underwriting judgment.
@@ -133,11 +165,11 @@ Risk categories include:
 - Third-party dependency risk
 - Operational maturity gaps
 
-Coverage areas are shown only as conversation topics. They are not policy recommendations.
+Coverage areas are shown only as conversation topics. They are discussion prompts, not advice.
 
 ## Disclaimer
 
-This is a prototype only. It does not provide insurance, legal, or financial advice. It does not determine actual insurability, coverage, limits, pricing, exclusions, or carrier appetite. A real insurance provider would need additional information before advising on or quoting any insurance product.
+This is an independent product prototype. It is not affiliated with Corgi and does not provide insurance, legal, financial, underwriting, or coverage advice. It does not determine actual insurability, coverage, limits, pricing, exclusions, or carrier appetite. Outputs are discussion prompts based on user-provided answers. A real insurance provider would need additional information before advising on or quoting any insurance product.
 
 ## Why This Matters for Corgi-Style Startup Insurance
 

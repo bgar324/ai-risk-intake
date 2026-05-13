@@ -57,7 +57,7 @@ export function ProductPreview() {
           <ul className="divide-y text-sm text-muted-foreground">
             <li className="flex gap-3 px-5 py-3"><AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />How are customer-facing outputs reviewed?</li>
             <li className="flex gap-3 px-5 py-3"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-zinc-500" />What customer data is stored and retained?</li>
-            <li className="flex gap-3 px-5 py-3"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-zinc-500" />Do contracts require specific coverage limits?</li>
+            <li className="flex gap-3 px-5 py-3"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-zinc-500" />Do customer contracts ask for specific limits?</li>
           </ul>
         </div>
       </CardContent>

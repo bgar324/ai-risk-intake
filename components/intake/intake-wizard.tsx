@@ -174,7 +174,7 @@ export function IntakeWizard() {
                 <AlertCircle className="text-amber-700" />
                 <AlertTitle>Before generating results</AlertTitle>
                 <AlertDescription>
-                  This prototype identifies possible risk areas for discussion. It does not provide insurance, legal, or financial advice.
+                  This prototype identifies possible risk areas for discussion. It does not provide insurance, legal, financial, underwriting, or coverage advice.
                 </AlertDescription>
               </Alert>
             )}
@@ -216,7 +216,7 @@ function renderStep(
   if (currentStep === 0) {
     return (
       <>
-        <TextField label="Company name" field="companyName" register={register} error={errors.companyName?.message} placeholder="Corgi Labs" />
+        <TextField label="Company name" field="companyName" register={register} error={errors.companyName?.message} placeholder="Northstar AI" />
         <TextField label="Website optional" field="website" register={register} error={errors.website?.message} placeholder="https://example.com" />
         <div className="grid gap-5 sm:grid-cols-2">
           <SelectField label="Company stage" field="companyStage" value={values.companyStage} setValue={setValue} options={options.companyStage} error={errors.companyStage?.message} />

@@ -23,7 +23,7 @@ export const categoryQuestions: Record<RiskCategory, string[]> = {
   "Data privacy and security": [
     "What data is collected, stored, and retained?",
     "Is customer data encrypted at rest and in transit?",
-    "Do contracts require specific cyber coverage limits or security controls?",
+    "Do customer contracts ask for specific cyber coverage limits or security controls?",
   ],
   "Enterprise contract requirements": [
     "Which customers have requested insurance requirements or coverage limits?",
@@ -95,7 +95,7 @@ export const categoryMethodology: Record<
       "Business-critical or high-impact recommendations increase the signal further.",
       "Rare or missing human review increases process concern.",
     ],
-    limits: "The score does not judge model quality, safety performance, or actual liability.",
+    limits: "The score does not judge model quality, safety performance, actual liability, or coverage fit.",
   },
   "Data privacy and security": {
     signal: "Looks for confidential, personal, sensitive, health, financial, student, source code, or legal data exposure.",
@@ -122,7 +122,7 @@ export const categoryMethodology: Record<
       "Business-critical reliance and possible customer financial loss increase the signal.",
       "Agentic workflows add execution and service delivery questions.",
     ],
-    limits: "The score is not a coverage recommendation or estimate of claim likelihood.",
+    limits: "The score is not advice and does not estimate claim likelihood.",
   },
   "Directors and officers exposure": {
     signal: "Looks for company stage, investor requirements, board formation, and governance-related buying reasons.",

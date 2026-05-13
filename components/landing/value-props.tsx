@@ -50,7 +50,7 @@ export function ValueProps() {
             </div>
             <h2 className="text-2xl font-semibold tracking-tight">Built for AI startup realities</h2>
             <p className="mt-4 max-w-xl text-muted-foreground">
-              The intake maps product, data, customer, and operating context into the questions a provider is likely to need before quoting or qualifying a lead.
+              The intake maps product, data, customer, and operating context into the questions a provider may ask during a quote conversation or qualification handoff.
             </p>
           </div>
           <div className="grid overflow-hidden rounded-lg border sm:grid-cols-2">

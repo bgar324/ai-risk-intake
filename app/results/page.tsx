@@ -121,6 +121,10 @@ export default function ResultsPage() {
                 </CardContent>
               </Card>
 
+              <p className="rounded-lg border border-zinc-300 bg-white px-4 py-3 text-xs leading-5 text-muted-foreground">
+                Independent prototype. Outputs are discussion prompts based on user-provided answers and do not provide insurance, legal, financial, underwriting, or coverage advice.
+              </p>
+
               <Tabs defaultValue="risk" className="space-y-5">
                 <TabsList className="grid h-auto w-full grid-cols-2 lg:w-auto lg:grid-cols-4">
                   <TabsTrigger value="risk">Risk areas</TabsTrigger>

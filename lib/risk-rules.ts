@@ -221,7 +221,8 @@ export function generateRiskResults(answers: IntakeAnswers): RiskResults {
       coverageConversationAreas,
       questionsToAsk,
       internalNotes: answers.internalNotes?.trim() || undefined,
-      disclaimer: "This is not insurance, legal, or financial advice.",
+      disclaimer:
+        "This is an independent product prototype. It is not affiliated with Corgi and does not provide insurance, legal, financial, underwriting, or coverage advice. Outputs are discussion prompts based on user-provided answers.",
     },
   };
 }

@@ -92,7 +92,7 @@ describe("generateRiskResults", () => {
       "Uses third-party LLM APIs",
       "Builds agents that take actions",
     ]);
-    assert.equal(results.internalSummary.disclaimer, "This is not insurance, legal, or financial advice.");
+    assert.match(results.internalSummary.disclaimer, /does not provide insurance, legal, financial, underwriting, or coverage advice/);
   });
 
   it("keeps low-exposure intakes low signal", () => {

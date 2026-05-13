@@ -25,7 +25,7 @@ export function Hero() {
             </Button>
           </div>
           <p className="mt-4 max-w-xl text-xs leading-5 text-muted-foreground">
-            Identifies discussion areas. Does not provide insurance, legal, or financial advice.
+            Independent product prototype. Identifies discussion areas; does not provide insurance, legal, financial, underwriting, or coverage advice.
           </p>
         </div>
         <ProductPreview />

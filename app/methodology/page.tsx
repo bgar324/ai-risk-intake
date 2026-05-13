@@ -36,9 +36,18 @@ export default function MethodologyPage() {
             <p className="metric-label">Methodology</p>
             <h1 className="mt-3 text-3xl font-semibold tracking-tight">How this prototype maps intake answers to risk signals.</h1>
             <p className="mt-4 text-base leading-7 text-muted-foreground">
-              AI Risk Intake uses transparent rules to organize the first insurance conversation. It is deliberately conservative about language and does not provide insurance, legal, or financial advice.
+              AI Risk Intake uses transparent rules to organize the first insurance conversation. It is an independent product prototype and does not provide insurance, legal, financial, underwriting, or coverage advice.
             </p>
           </div>
+          <section className="mt-8 max-w-4xl rounded-lg border border-zinc-300 bg-white p-6">
+            <p className="metric-label">Why this exists</p>
+            <p className="mt-3 text-sm leading-6 text-zinc-700">
+              This prototype explores how AI startups could describe complex product and data risks in a structured way before an insurance quote conversation. The goal is to reduce ambiguity for founders and create a cleaner handoff for insurance teams evaluating AI-related risk signals.
+            </p>
+            <p className="mt-3 text-sm leading-6 text-muted-foreground">
+              AI founders tend to describe risk in product language. Insurance teams need structured signals about data, customers, contracts, model behavior, and operational maturity. This tool translates between those two worlds as a product experiment, not as an underwriting system.
+            </p>
+          </section>
           <Card className="mt-8 max-w-4xl border-zinc-300 bg-white shadow-none">
             <CardContent className="p-6">
               <Accordion type="single" collapsible defaultValue="item-0">
