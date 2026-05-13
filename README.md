@@ -48,6 +48,7 @@ At the end, it generates:
 - Copy internal JSON
 - Empty state when no completed intake exists
 - Methodology page explaining the scoring limits
+- Unit-tested risk scoring rules
 - Responsive product UI for desktop and mobile
 
 ## Tech Stack
@@ -101,6 +102,7 @@ Run checks:
 ```bash
 npm run lint
 npm run typecheck
+npm run test
 npm run build
 ```
 
@@ -148,8 +150,6 @@ AI startups introduce product and data questions that do not fit neatly into a g
 - Persist completed intakes to a backend
 - Add downloadable PDF export
 - Add admin-facing lead list
-- Add screenshot assets for portfolio presentation
-- Add unit tests for the rules engine
 - Add richer methodology explanations for each score driver
 - Add analytics events for funnel drop-off analysis
 - Add optional broker/internal notes
