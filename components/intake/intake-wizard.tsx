@@ -171,7 +171,7 @@ export function IntakeWizard() {
             <Separator className="my-6" />
             {currentStep === intakeSteps.length - 1 && (
               <Alert variant="warning" className="mb-6">
-                <AlertCircle className="h-4 w-4" />
+                <AlertCircle className="text-amber-700" />
                 <AlertTitle>Before generating results</AlertTitle>
                 <AlertDescription>
                   This prototype identifies possible risk areas for discussion. It does not provide insurance, legal, or financial advice.
