@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 20% 99%;
+  --foreground: 240 10% 4%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 4%;
+  --primary: 222 47% 11%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 6% 96%;
+  --secondary-foreground: 240 6% 10%;
+  --muted: 240 6% 96%;
+  --muted-foreground: 240 4% 38%;
+  --accent: 199 89% 48%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 72% 48%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 6% 88%;
+  --input: 240 6% 86%;
+  --ring: 222 47% 18%;
+  --radius: 0.5rem;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-feature-settings: "ss01", "ss02", "cv01", "cv03";
+}
+
+::selection {
+  background: hsl(199 89% 48% / 0.18);
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
+
+.product-surface {
+  background:
+    linear-gradient(to right, hsl(240 6% 88% / 0.42) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(240 6% 88% / 0.42) 1px, transparent 1px),
+    hsl(var(--background));
+  background-size: 28px 28px;
+}
+
+.metric-label {
+  @apply text-[11px] font-medium uppercase tracking-normal text-muted-foreground;
+}
