@@ -18,7 +18,6 @@ export function InternalSummary({ summary }: { summary: InternalSummaryType }) {
       <div className="flex items-center justify-between gap-4 border-b bg-zinc-50 px-5 py-4">
         <div>
           <h2 className="text-base font-semibold">Internal handoff summary</h2>
-          <p className="mt-1 text-sm text-muted-foreground">Structured data Corgi could use for qualification or underwriting handoff.</p>
         </div>
         <Button type="button" variant="outline" size="sm" onClick={copyJson}>
           <Copy className="h-4 w-4" /> Copy JSON
